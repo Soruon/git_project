@@ -1,6 +1,5 @@
 import sys
 from io import BytesIO
-# Этот класс поможет нам сделать картинку из потока байт
 
 import requests
 from PIL import Image
@@ -19,7 +18,6 @@ json_response = response.json()
 toponym = json_response["response"]["GeoObjectCollection"][
     "featureMember"][0]["GeoObject"]
 toponym_coodrinates = toponym["Point"]["pos"]
-# Долгота и широта:
 toponym_longitude, toponym_lattitude = toponym_coodrinates.split(" ")
 
 address_ll = ",".join([toponym_longitude, toponym_lattitude])
