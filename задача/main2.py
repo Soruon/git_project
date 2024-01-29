@@ -5,9 +5,9 @@ def get_size_parms(json_response, address_ll):
 
     # Получаем координаты ответа.
     org_point = address_ll
-    print("Введите размеры [1] Например 0.006 -- >")
+    print("Введите размеры [1] =")
     delta1 = input()
-    print("Введите размеры [2] Например 0.006 -- >")
+    print("Введите размеры [2] =")
     delta2 = input()
     # Собираем параметры для запроса к StaticMapsAPI:
     map_params = {
